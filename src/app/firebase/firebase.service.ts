@@ -8,9 +8,7 @@ export class FirebaseService {
   public cards: AngularFireList<Card>;
   private dbPath: string = '/cards';
 
-  constructor(private db: AngularFireDatabase) { 
-    
-   }
+  constructor(private db: AngularFireDatabase) {  }
 
   getCardsList() {
     this.cards = this.db.list(this.dbPath);
@@ -26,6 +24,10 @@ export class FirebaseService {
       .catch(error => this.handleError(error))
   }
 
+  deleteCard(key: string): void {
+    this.cards.remove(key)
+      .catch(error => this.handleError(error))
+  }
   private handleError(error) {
     console.log(error)
   }

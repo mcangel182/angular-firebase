@@ -15,9 +15,13 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
-  public triggerReload() {
+  public reload() {
     this.firebaseService.updateCard(this.card.$key, { status: "Reloading" });
     setTimeout(() => this.firebaseService.updateCard(this.card.$key, { status: "Created" }),5000)
+  }
+
+  public delete() {
+    this.firebaseService.deleteCard(this.card.$key);
   }
 
 }
