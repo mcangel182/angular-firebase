@@ -3,6 +3,5 @@
 }
 .buttons-header{
   display: flex;
-  justify-content: flex-end;
   margin: 0 15px 15px 0;
 }
