@@ -15,8 +15,7 @@ export class FirebaseService {
     return this.cards;
   }
   addCard(card) {
-    this.cards.push(card)
-     .catch(error => this.handleError(error))
+    this.cards.push(card);
   }
 
   updateCard(key: string, value: any): void {

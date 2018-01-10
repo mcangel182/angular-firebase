@@ -1,7 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Card } from '../models/card'; 
 import { FirebaseService } from '../firebase/firebase.service';
-import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-card',
