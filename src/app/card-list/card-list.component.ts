@@ -30,5 +30,6 @@ export class CardListComponent implements OnInit {
 
   public addCard(card) {
     this.firebaseService.addCard(card);
+    console.log("");
   }
 }
